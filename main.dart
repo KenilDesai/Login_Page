@@ -41,19 +41,6 @@ class SpalshPageState extends State<SpalshPage> with SingleTickerProviderStateMi
 
  late Animation _animation;
   late AnimationController _animaioncontroller;
- /* void initState() {
-
-    super.initState();
-
-    _animaioncontroller =AnimationController(vsync:this,duration: Duration(seconds: 3));
-    _animation = Tween(begin: 0.3,end: 1.0).animate(_animaioncontroller);
-
-    _animaioncontroller.addListener(() { });
-    _animaioncontroller.forward();//This line can be use in button also
-
-    //This function is use for after spalsh screen where user should be go
-
-  }*/
 
   var listRadious = [140.0,210.0,280.0,350.0,];
   static const String KEYLOGIN = "login";
@@ -69,7 +56,7 @@ class SpalshPageState extends State<SpalshPage> with SingleTickerProviderStateMi
        _isVisible = true;
      });
    });
-//This function is use for after spalsh screen where user should be go*/
+//This function is use for after spalsh screen where user should be go
    whereToGo();
  }
 
@@ -97,46 +84,6 @@ class SpalshPageState extends State<SpalshPage> with SingleTickerProviderStateMi
           ),
         ),
       ),
-
-
-          //reeple effect
-        /*  Stack(
-            alignment: Alignment.center,
-            children: [
-              // Animated circles
-              ...listRadious.map((radius) => AnimatedBuilder(
-                animation: _animation,
-                builder: (context, child) {
-                  return Container(
-                    width: radius * _animation.value,
-                    height: radius * _animation.value,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.green.withOpacity(1.0 - _animation.value),
-                    ),
-                  );
-                },
-              ),),
-
-              //center logo
-              AnimatedOpacity(
-
-                opacity: myopacity,
-                duration: Duration(seconds: 2),
-                curve: Curves.bounceOut,
-                child:   Text(
-                  "BlackHat",
-                  style: TextStyle(
-                    color: Colors.white54,
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-            ],
-          ),*/
-
-
     );
   }
 
