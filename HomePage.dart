@@ -30,19 +30,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    /* var arrdata = [
-      {'name': 'Kenil', 'mobile': '7016253971', 'unseen': '1'},
-      {'name': 'Arpit', 'mobile': '931686877', 'unseen': '4'},
-      {'name': 'Rutil', 'mobile': '9512553594', 'unseen': '2'},
-      {'name': 'Kirtan', 'mobile': '7984785722', 'unseen': '1'},
-      {'name': 'Mayank', 'mobile': '6352191121', 'unseen': '5'},
-      {
-        'name': 'Pavan',
-        'mobile': '7861903225',
-        'unseen': '3',
-      },
-    ];
-    var arrNames = ['Kenil', 'Kirtan', 'Rutil', 'Mayank', 'DK'];*/
+
     return Scaffold(
       backgroundColor: Colors.green.shade50,
       appBar: AppBar(
@@ -170,17 +158,7 @@ class _HomePageState extends State<HomePage> {
                 child: Text('LogOut')),
           ],
         ),
-        /* Column(
-          children: [
-            SizedBox(
-              height: 100,
-            ),
 
-
-
-
-          ],
-        ),*/
       ),
     );
   }
