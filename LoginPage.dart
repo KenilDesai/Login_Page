@@ -13,15 +13,18 @@ class _LoginPageState extends State<LoginPage> {
   bool _showPassword = false;
 
   @override
+  //This is user for show or hide password button
   void initState() {
     super.initState();
     _showPassword = false; // Initialize it here
   }
 
   @override
+  //Static username or password(for example only)
   var username = "kenil";
   var password = "101404"; // Convert password to a string
 
+  //For user input
   final enterusername = TextEditingController();
   final enterpassword = TextEditingController();
 
@@ -35,10 +38,15 @@ class _LoginPageState extends State<LoginPage> {
               fontSize: 25, fontFamily: 'BlackHat', color: Colors.black),
         ),
       ),
-      body: Container(
+      body: 
+      
+      
+      //Main container
+      Container(
         height: double.infinity,
         width: double.infinity,
         decoration: BoxDecoration(
+          //It's use for color shading on background
           gradient: LinearGradient(
             colors: [
               Color(0xff84fab0),
@@ -51,17 +59,29 @@ class _LoginPageState extends State<LoginPage> {
             end: FractionalOffset(0.0, 1.0),
           ),
         ),
+
+        //Start UI for login page
         child: SingleChildScrollView(
           child: Center(
+
+            //In this container we design an actual ui (for make ui more atractive)
             child: Container(
               width: 370,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+
+                  //we can also use padding widget for spacing between two widgets
                   SizedBox(
                     height: 140,
                   ),
 
+
+
+
+                  
+                  //This all widgets is part of login page 
+                  
                   //logo
                   Text(
                     "BlackHat",
@@ -146,7 +166,7 @@ class _LoginPageState extends State<LoginPage> {
 
                   SizedBox(height: 30),
 
-                  //login BTN
+                  //login Button
                   ElevatedButton(
                     onPressed: () async {
                       if (username == enterusername.text &&
@@ -177,7 +197,7 @@ class _LoginPageState extends State<LoginPage> {
 
                   SizedBox(height: 25,),
 
-                  //or
+                  //Simple Text "OR"
                   Text('Or', style: TextStyle(fontSize: 35, color: Colors.black54),),
 
                   SizedBox(height: 25,),
