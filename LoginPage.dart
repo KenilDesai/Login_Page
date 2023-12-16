@@ -76,12 +76,7 @@ class _LoginPageState extends State<LoginPage> {
                     height: 140,
                   ),
 
-
-
-
-                  
                   //This all widgets is part of login page 
-                  
                   //logo
                   Text(
                     "BlackHat",
