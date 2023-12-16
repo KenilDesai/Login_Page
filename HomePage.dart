@@ -19,13 +19,13 @@ class _HomePageState extends State<HomePage> {
   ];
 
   int current = 0;
+  //This list for simple icons (use for example only)
   List<IconData> icons = [
     FontAwesomeIcons.sprayCan,
     FontAwesomeIcons.bottleWater,
     FontAwesomeIcons.wineBottle,
     FontAwesomeIcons.user,
     FontAwesomeIcons.phone
-
   ];
 
   @override
@@ -40,10 +40,17 @@ class _HomePageState extends State<HomePage> {
               fontSize: 35, color: Colors.black, fontFamily: 'BlackHat'),
         ),
       ),
-      body: Container(
+
+      
+      body:
+
+      //main container 
+      Container(
         height: double.infinity,
         width: double.infinity,
         decoration: BoxDecoration(
+
+          //This is use for apply color shading in background
           gradient: LinearGradient(
             colors: [
               Color(0xff84fab0),
@@ -56,12 +63,17 @@ class _HomePageState extends State<HomePage> {
             end: FractionalOffset(0.0, 1.0),
           ),
         ),
+
+        //This part for main Ui
         child: Column(
           verticalDirection: VerticalDirection.down,
           children: [
+
+            //It's user for spacing between teo widgets, But we also use padding widget also 
             SizedBox(
               height: 40,
             ),
+            
             Text(
               'Mall System',
               style: TextStyle(
