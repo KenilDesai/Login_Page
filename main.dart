@@ -21,7 +21,6 @@ class MyApp extends StatelessWidget {
 
       theme: ThemeData(
         primarySwatch: Colors.green,
-
       ),
 
       home:SpalshPage('')
@@ -40,10 +39,9 @@ class SpalshPage extends StatefulWidget {
 class SpalshPageState extends State<SpalshPage> with SingleTickerProviderStateMixin{
 
  late Animation _animation;
-  late AnimationController _animaioncontroller;
-
-  var listRadious = [140.0,210.0,280.0,350.0,];
-  static const String KEYLOGIN = "login";
+ late AnimationController _animaioncontroller;
+  
+static const String KEYLOGIN = "login";
 
  bool _isVisible = false;
 
@@ -68,6 +66,7 @@ class SpalshPageState extends State<SpalshPage> with SingleTickerProviderStateMi
         width:double.infinity,
         color:Colors.black,
         child:Center(
+          //It's use for fade effact
           child: AnimatedOpacity(
             duration: Duration(seconds: 2),
             curve:Curves.bounceInOut,
@@ -95,24 +94,31 @@ class SpalshPageState extends State<SpalshPage> with SingleTickerProviderStateMi
 
    Timer(Duration(seconds: 2),()
    {
+
+     //If the condition will true then user is switch on the periculer page 
      if(isLoggedIn != null){
+       //User switch on HomePage
        if(isLoggedIn){
          Navigator.pushReplacement(
              context, MaterialPageRoute(builder: (context) => HomePage(),));
        }
+       //User switch on LoginPage
        else{
          Navigator.pushReplacement(
              context, MaterialPageRoute(builder: (context) => LoginPage(),));
        }
      }
+     //User switch on LoginPage
      else{
        Navigator.pushReplacement(
            context, MaterialPageRoute(builder: (context) =>LoginPage(),));
      }
 
-   },);
-
- }
+   },
+        
+    
+    );
+   }
  }
 
 
